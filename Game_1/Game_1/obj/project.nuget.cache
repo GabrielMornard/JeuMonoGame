@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "H1L2OGWh+2c=",
+  "success": true,
+  "projectFilePath": "C:\\TravauxPerso\\TutorielYoutube\\Game_1\\Game_1\\Game_1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\GABRI\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\GABRI\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+  ],
+  "logs": []
+}
