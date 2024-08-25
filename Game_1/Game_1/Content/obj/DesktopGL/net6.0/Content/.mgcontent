@@ -4,10 +4,12 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/TravauxPerso/TutorielYoutube/Game_1/Game_1/Content/IDLE.png</File>
-    <File>C:/TravauxPerso/TutorielYoutube/Game_1/Game_1/Content/RUN.png</File>
+    <File>C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/IDLE.png</File>
+    <File>C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/RUN.png</File>
+    <File>C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/TX Tileset Ground.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>

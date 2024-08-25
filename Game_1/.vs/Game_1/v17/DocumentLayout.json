@@ -1,14 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\TravauxPerso\\TutorielYoutube\\Game_1\\",
+  "WorkspaceRootPath": "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5A37F952-9802-43C9-A7D7-FF47C7DD726E}|Game_1\\Game_1.csproj|c:\\travauxperso\\tutorielyoutube\\game_1\\game_1\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5A37F952-9802-43C9-A7D7-FF47C7DD726E}|Game_1\\Game_1.csproj|c:\\travauxperso\\tutorielyoutube\\jeumonogame\\game_1\\game_1\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5A37F952-9802-43C9-A7D7-FF47C7DD726E}|Game_1\\Game_1.csproj|solutionrelative:game_1\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A37F952-9802-43C9-A7D7-FF47C7DD726E}|Game_1\\Game_1.csproj|c:\\travauxperso\\tutorielyoutube\\game_1\\game_1\\followcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A37F952-9802-43C9-A7D7-FF47C7DD726E}|Game_1\\Game_1.csproj|solutionrelative:game_1\\followcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +14,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FollowCamera.cs",
-              "DocumentMoniker": "C:\\TravauxPerso\\TutorielYoutube\\Game_1\\Game_1\\FollowCamera.cs",
-              "RelativeDocumentMoniker": "Game_1\\FollowCamera.cs",
-              "ToolTip": "C:\\TravauxPerso\\TutorielYoutube\\Game_1\\Game_1\\FollowCamera.cs",
-              "RelativeToolTip": "Game_1\\FollowCamera.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T02:16:09.908Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\TravauxPerso\\TutorielYoutube\\Game_1\\Game_1\\Game1.cs",
+              "DocumentMoniker": "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\Game_1\\Game1.cs",
               "RelativeDocumentMoniker": "Game_1\\Game1.cs",
-              "ToolTip": "C:\\TravauxPerso\\TutorielYoutube\\Game_1\\Game_1\\Game1.cs",
+              "ToolTip": "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\Game_1\\Game1.cs",
               "RelativeToolTip": "Game_1\\Game1.cs",
-              "ViewState": "AQIAAHUAAAAAAAAAAIAwwI4AAAAgAAAA",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAAAHkAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T23:30:27.501Z",
               "EditorCaption": ""

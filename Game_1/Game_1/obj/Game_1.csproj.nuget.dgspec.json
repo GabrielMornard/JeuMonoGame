@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\TravauxPerso\\TutorielYoutube\\Game_1\\Game_1\\Game_1.csproj": {}
+    "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\Game_1\\Game_1.csproj": {}
   },
   "projects": {
-    "C:\\TravauxPerso\\TutorielYoutube\\Game_1\\Game_1\\Game_1.csproj": {
+    "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\Game_1\\Game_1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\TravauxPerso\\TutorielYoutube\\Game_1\\Game_1\\Game_1.csproj",
+        "projectUniqueName": "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\Game_1\\Game_1.csproj",
         "projectName": "Game_1",
-        "projectPath": "C:\\TravauxPerso\\TutorielYoutube\\Game_1\\Game_1\\Game_1.csproj",
+        "projectPath": "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\Game_1\\Game_1.csproj",
         "packagesPath": "C:\\Users\\GABRI\\.nuget\\packages\\",
-        "outputPath": "C:\\TravauxPerso\\TutorielYoutube\\Game_1\\Game_1\\obj\\",
+        "outputPath": "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\Game_1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

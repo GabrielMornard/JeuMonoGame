@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/TravauxPerso/TutorielYoutube/Game_1/Game_1/Content/RUN.png</SourceFile>
+  <SourceFile>C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/RUN.png</SourceFile>
   <SourceTime>2024-08-23T19:30:03.748879-04:00</SourceTime>
-  <DestFile>C:/TravauxPerso/TutorielYoutube/Game_1/Game_1/Content/bin/DesktopGL/RUN.xnb</DestFile>
-  <DestTime>2024-08-23T21:59:04.8445771-04:00</DestTime>
+  <DestFile>C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/bin/DesktopGL/RUN.xnb</DestFile>
+  <DestTime>2024-08-24T22:18:31.8838791-04:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T07:44:56-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

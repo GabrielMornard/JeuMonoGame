@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
+using System.IO;
 
 namespace Game_1
 {
@@ -9,59 +11,73 @@ namespace Game_1
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        private FollowCamera camera;
+        private Player player;
+        private Camera camera;
 
-        private AnimationState currentAnimationState;
-        private int idleFrameCount;
-        private int movingFrameCount;
-        private int currentIdleFrame;
-        private int currentMovingFrame;
-        private int idleFrameUpdateInterval = 15; // Adjust this value for idle animation speed
-        private int movingFrameUpdateInterval = 5; // Adjust this value for moving animation speed
-        private int frameUpdateCounter = 0;
+        private Vector2 playerPosition;
+        private Direction playerDirection;
+        private bool isMoving;
+        private Texture2D map;
 
-        Texture2D spriteSheets;
-        Texture2D spriteSheetsRunning;
+        private KeyboardState previousKeyboardState;
 
-        Vector2 playerPosition;
-        Rectangle curentPostion;
-        Vector2 frameSize;
-
-
-        int counter;
-        int activeFrame;
-        int numFrame;
-
-        bool isMoving;
+        private Dictionary<Vector2, int> tilemap;
+        private List<Rectangle> textureStored;
 
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-            camera = new(Vector2.Zero);
+            tilemap = loadMap("../../../Data/map.csv");
+            textureStored = new()
+            {
+                new Rectangle(0, 0, 32, 32),
+                new Rectangle(32, 0, 32, 32),
+                new Rectangle(64, 0, 32, 32)
+            };
+        }
+
+        private Dictionary<Vector2, int> loadMap(string filepath) 
+        {
+            Dictionary<Vector2, int> result = new();
+
+            StreamReader reader = new StreamReader(filepath);
+
+            int y = 0;
+
+            string line;
+            while ((line = reader.ReadLine()) != null) 
+            {
+                string[] items = line.Split(',');
+
+                for(int x = 0; x < items.Length; x++) 
+                {
+                    if (int.TryParse(items[x], out int value)){
+                        if (value > 0) 
+                        {
+                            result[new Vector2(x, y)] = value;
+                        }    
+                    }
+                }
+                y++;
+            }
+            return result;
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // Load the sprite sheet
-            spriteSheets = Content.Load<Texture2D>("IDLE");
-            spriteSheetsRunning = Content.Load<Texture2D>("RUN");
-
-            // Initialize animation and player position
-            activeFrame = 0;
-            numFrame = 5;
-            idleFrameCount = 5;
-            movingFrameCount = 8;
-
-            counter = 0;
-            frameSize = new Vector2(30, 40);
+            Texture2D idleTexture = Content.Load<Texture2D>("IDLE");
+            Texture2D runningTexture = Content.Load<Texture2D>("RUN");
+            map = Content.Load<Texture2D>("TX Tileset Ground");
 
             playerPosition = new Vector2(100, 100); // Starting position of the player
-            curentPostion.X = (int) playerPosition.X;
-            curentPostion.Y = (int) playerPosition.Y;
+            player = new Player(idleTexture, runningTexture, playerPosition);
+
+            Vector2 screenSize = new Vector2(_graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
+            camera = new Camera(screenSize);
         }
 
         protected override void Update(GameTime gameTime)
@@ -69,60 +85,35 @@ namespace Game_1
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // Update player movement and animation
             UpdatePlayer(gameTime);
 
             // Update the camera to follow the player
-            Vector2 screenSize = new Vector2(_graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
-            camera.Follow(curentPostion, screenSize);
+            camera.Follow(player);
 
             base.Update(gameTime);
         }
-
 
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+            _spriteBatch.Begin(transformMatrix: camera.Transform, samplerState: SamplerState.PointClamp);
 
-            // Determine sprite effects based on movement direction
-            SpriteEffects spriteEffects = isMoving && playerDirection == Direction.Left
-                ? SpriteEffects.FlipHorizontally
-                : SpriteEffects.None;
+            foreach (var tile in tilemap) 
+            {
+                Rectangle dest = new Rectangle((int)tile.Key.X * 64, (int)tile.Key.Y * 32, 64, 64);
 
-            Texture2D currentTexture = currentAnimationState == AnimationState.Idle ? spriteSheets : spriteSheetsRunning;
-            int currentFrame = currentAnimationState == AnimationState.Idle ? currentIdleFrame : currentMovingFrame;
+                Rectangle src = textureStored[tile.Value - 1];
 
-            // Scale factor
-            float scale = 3.5f;
+                _spriteBatch.Draw(map, dest, src, Color.White);
+            }
 
-            _spriteBatch.Draw(
-                currentTexture,
-                new Vector2(playerPosition.X - camera.Position.X, playerPosition.Y - camera.Position.Y), // Apply camera offset
-                new Rectangle(31 + (currentFrame * 93), 71, (int)frameSize.X, (int)frameSize.Y),
-                Color.White,
-                0f, // Rotation angle (0 for no rotation)
-                new Vector2(frameSize.X / 2, frameSize.Y / 2), // Origin (center of the sprite)
-                scale, // Scale
-                spriteEffects, // Sprite effects (flipping)
-                0f); // Layer depth
-
+            player.Draw(_spriteBatch, Vector2.Zero, playerDirection); // No need to pass camera position anymore
 
             _spriteBatch.End();
 
             base.Draw(gameTime);
         }
-
-
-        private enum Direction
-        {
-            None,
-            Left,
-            Right
-        }
-
-        private Direction playerDirection = Direction.None;
 
         private void UpdatePlayer(GameTime gameTime)
         {
@@ -131,6 +122,11 @@ namespace Game_1
             playerDirection = Direction.None;
 
             // Move the player
+            if(keyboardState.IsKeyDown(Keys.Space) && previousKeyboardState == Keyboard.GetState())
+            {
+                playerPosition.Y -= 20f;
+                
+            }
             if (keyboardState.IsKeyDown(Keys.D))
             {
                 playerPosition.X += 6f;
@@ -154,55 +150,7 @@ namespace Game_1
                 isMoving = true;
             }
 
-            // Update the current animation state
-            if (isMoving)
-            {
-                currentAnimationState = AnimationState.Moving;
-            }
-            else
-            {
-                currentAnimationState = AnimationState.Idle;
-            }
-            curentPostion.X = (int)playerPosition.X;
-            curentPostion.Y = (int)playerPosition.Y;
-            FrameCalculation();
-        }
-
-
-
-        /// <summary>
-        /// Calculate the current frame for animations.
-        /// </summary>
-        private void FrameCalculation()
-        {
-            frameUpdateCounter++;
-
-            int currentFrameUpdateInterval = currentAnimationState == AnimationState.Moving
-                ? movingFrameUpdateInterval
-                : idleFrameUpdateInterval;
-
-            if (frameUpdateCounter > currentFrameUpdateInterval)
-            {
-                frameUpdateCounter = 0;
-
-                // Update the current frame based on the animation state
-                if (currentAnimationState == AnimationState.Moving)
-                {
-                    currentMovingFrame++;
-                    if (currentMovingFrame >= movingFrameCount)
-                    {
-                        currentMovingFrame = 0;
-                    }
-                }
-                else if (currentAnimationState == AnimationState.Idle)
-                {
-                    currentIdleFrame++;
-                    if (currentIdleFrame >= idleFrameCount)
-                    {
-                        currentIdleFrame = 0;
-                    }
-                }
-            }
+            player.Update(gameTime, playerPosition, isMoving);
         }
     }
 }
