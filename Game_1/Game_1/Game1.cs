@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
@@ -17,11 +18,17 @@ namespace Game_1
         private Vector2 playerPosition;
         private Direction playerDirection;
         private bool isMoving;
+
         private Texture2D map;
 
+        private Dictionary<Vector2, int> collisions;
+        private Dictionary<Vector2, int> mg;
+        private Dictionary<Vector2, int> fg;
+        private Texture2D textureAtlas;
+        private Texture2D Tree;
         private KeyboardState previousKeyboardState;
 
-        private Dictionary<Vector2, int> tilemap;
+        //private Dictionary<Vector2, int> tilemap;
         private List<Rectangle> textureStored;
 
         public Game1()
@@ -29,7 +36,10 @@ namespace Game_1
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-            tilemap = loadMap("../../../Data/map.csv");
+            //tilemap = loadMap("../../../Data/map.csv");
+            collisions = loadMap("../../../Data/mainFloor_collisions.csv");
+            mg = loadMap("../../../Data/mainFloor_Sol.csv");
+            fg = loadMap("../../../Data/mainFloor_Background.csv");
             textureStored = new()
             {
                 new Rectangle(0, 0, 32, 32),
@@ -54,7 +64,7 @@ namespace Game_1
                 for(int x = 0; x < items.Length; x++) 
                 {
                     if (int.TryParse(items[x], out int value)){
-                        if (value > 0) 
+                        if (value > -1) 
                         {
                             result[new Vector2(x, y)] = value;
                         }    
@@ -72,6 +82,9 @@ namespace Game_1
             Texture2D idleTexture = Content.Load<Texture2D>("IDLE");
             Texture2D runningTexture = Content.Load<Texture2D>("RUN");
             map = Content.Load<Texture2D>("TX Tileset Ground");
+            Tree = Content.Load<Texture2D>("Tree");
+
+            textureAtlas = Content.Load<Texture2D>("Textures-16");
 
             playerPosition = new Vector2(100, 100); // Starting position of the player
             player = new Player(idleTexture, runningTexture, playerPosition);
@@ -99,13 +112,36 @@ namespace Game_1
 
             _spriteBatch.Begin(transformMatrix: camera.Transform, samplerState: SamplerState.PointClamp);
 
-            foreach (var tile in tilemap) 
+            //foreach (var tile in tilemap) 
+            //{
+            //    Rectangle dest = new Rectangle((int)tile.Key.X * 64, (int)tile.Key.Y * 32, 64, 64);
+
+            //    Rectangle src = textureStored[tile.Value - 1];
+
+            //    _spriteBatch.Draw(map, dest, src, Color.White);
+            //}
+            int display_Tilesize = 32;
+            int num_tiles_per_row = 32;
+            int pixel_per_tile = 32;
+            foreach (var tile in mg)
             {
-                Rectangle dest = new Rectangle((int)tile.Key.X * 64, (int)tile.Key.Y * 32, 64, 64);
+                Rectangle drect = new(
+                    (int)tile.Key.X * display_Tilesize,
+                    (int)tile.Key.Y * display_Tilesize,
+                    display_Tilesize,
+                    display_Tilesize
+                );
 
-                Rectangle src = textureStored[tile.Value - 1];
+                int x = tile.Value & num_tiles_per_row;
+                int y = tile.Value / num_tiles_per_row;
+                Rectangle src = new(
+                    x * pixel_per_tile,
+                    y* pixel_per_tile,
+                    pixel_per_tile,
+                    pixel_per_tile
+                );
 
-                _spriteBatch.Draw(map, dest, src, Color.White);
+                _spriteBatch.Draw(map, drect, src, Color.White);
             }
 
             player.Draw(_spriteBatch, Vector2.Zero, playerDirection); // No need to pass camera position anymore
@@ -122,11 +158,6 @@ namespace Game_1
             playerDirection = Direction.None;
 
             // Move the player
-            if(keyboardState.IsKeyDown(Keys.Space) && previousKeyboardState == Keyboard.GetState())
-            {
-                playerPosition.Y -= 20f;
-                
-            }
             if (keyboardState.IsKeyDown(Keys.D))
             {
                 playerPosition.X += 6f;
@@ -139,6 +170,7 @@ namespace Game_1
                 isMoving = true;
                 playerDirection = Direction.Left;
             }
+
             if (keyboardState.IsKeyDown(Keys.W))
             {
                 playerPosition.Y -= 6f;
@@ -152,5 +184,7 @@ namespace Game_1
 
             player.Update(gameTime, playerPosition, isMoving);
         }
+
+       
     }
 }

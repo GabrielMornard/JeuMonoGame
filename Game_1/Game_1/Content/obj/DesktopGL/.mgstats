@@ -1,4 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/IDLE.png","C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/bin/DesktopGL/IDLE.xnb","TextureProcessor","Texture2DContent",2226,208405,0,1165386
-"C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/RUN.png","C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/bin/DesktopGL/RUN.xnb","TextureProcessor","Texture2DContent",4118,333397,0,0101593
-"C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/TX Tileset Ground.png","C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/bin/DesktopGL/TX Tileset Ground.xnb","TextureProcessor","Texture2DContent",179789,1048661,0,0464189
+"C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/Tree.png","C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/bin/DesktopGL/Tree.xnb","TextureProcessor","Texture2DContent",27153,140421,0,1045091

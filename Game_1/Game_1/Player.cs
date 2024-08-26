@@ -32,6 +32,8 @@ namespace Game_1
             }
         }
 
+
+
         public void Update(GameTime gameTime, Vector2 playerPosition, bool isMoving)
         {
             this.position = playerPosition;

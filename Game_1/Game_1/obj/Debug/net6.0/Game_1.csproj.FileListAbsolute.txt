@@ -54,3 +54,5 @@ C:\TravauxPerso\TutorielYoutube\JeuMonoGame\Game_1\Game_1\obj\Debug\net6.0\Game_
 C:\TravauxPerso\TutorielYoutube\JeuMonoGame\Game_1\Game_1\obj\Debug\net6.0\Game_1.genruntimeconfig.cache
 C:\TravauxPerso\TutorielYoutube\JeuMonoGame\Game_1\Game_1\obj\Debug\net6.0\ref\Game_1.dll
 C:\TravauxPerso\TutorielYoutube\JeuMonoGame\Game_1\Game_1\bin\Debug\net6.0\Content\TX Tileset Ground.xnb
+C:\TravauxPerso\TutorielYoutube\JeuMonoGame\Game_1\Game_1\bin\Debug\net6.0\Content\Textures-16.xnb
+C:\TravauxPerso\TutorielYoutube\JeuMonoGame\Game_1\Game_1\bin\Debug\net6.0\Content\Tree.xnb
