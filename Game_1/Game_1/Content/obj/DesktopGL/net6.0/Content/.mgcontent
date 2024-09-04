@@ -7,10 +7,12 @@
     <File>C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/IDLE.png</File>
     <File>C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/RUN.png</File>
     <File>C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/Textures-16.png</File>
+    <File>C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/Tileset Outside.png</File>
     <File>C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/Tree.png</File>
     <File>C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Game_1/Game_1/Content/TX Tileset Ground.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

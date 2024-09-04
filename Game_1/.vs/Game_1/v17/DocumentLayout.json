@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5A37F952-9802-43C9-A7D7-FF47C7DD726E}|Game_1\\Game_1.csproj|c:\\travauxperso\\tutorielyoutube\\jeumonogame\\game_1\\game_1\\data\\mainfloor_sol.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{5A37F952-9802-43C9-A7D7-FF47C7DD726E}|Game_1\\Game_1.csproj|solutionrelative:game_1\\data\\mainfloor_sol.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A37F952-9802-43C9-A7D7-FF47C7DD726E}|Game_1\\Game_1.csproj|c:\\travauxperso\\tutorielyoutube\\jeumonogame\\game_1\\game_1\\content\\tx tileset ground.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{5A37F952-9802-43C9-A7D7-FF47C7DD726E}|Game_1\\Game_1.csproj|solutionrelative:game_1\\content\\tx tileset ground.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5A37F952-9802-43C9-A7D7-FF47C7DD726E}|Game_1\\Game_1.csproj|c:\\travauxperso\\tutorielyoutube\\jeumonogame\\game_1\\game_1\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5A37F952-9802-43C9-A7D7-FF47C7DD726E}|Game_1\\Game_1.csproj|solutionrelative:game_1\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A37F952-9802-43C9-A7D7-FF47C7DD726E}|Game_1\\Game_1.csproj|c:\\travauxperso\\tutorielyoutube\\jeumonogame\\game_1\\game_1\\data\\mainfloor_background.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{5A37F952-9802-43C9-A7D7-FF47C7DD726E}|Game_1\\Game_1.csproj|solutionrelative:game_1\\data\\mainfloor_background.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A37F952-9802-43C9-A7D7-FF47C7DD726E}|Game_1\\Game_1.csproj|c:\\travauxperso\\tutorielyoutube\\jeumonogame\\game_1\\game_1\\data\\mainfloor_collisions.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{5A37F952-9802-43C9-A7D7-FF47C7DD726E}|Game_1\\Game_1.csproj|solutionrelative:game_1\\data\\mainfloor_collisions.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,68 +14,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "mainFloor_Background.csv",
-              "DocumentMoniker": "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\Game_1\\Data\\mainFloor_Background.csv",
-              "RelativeDocumentMoniker": "Game_1\\Data\\mainFloor_Background.csv",
-              "ToolTip": "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\Game_1\\Data\\mainFloor_Background.csv",
-              "RelativeToolTip": "Game_1\\Data\\mainFloor_Background.csv",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2024-08-26T02:42:06.493Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "mainFloor_collisions.csv",
-              "DocumentMoniker": "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\Game_1\\Data\\mainFloor_collisions.csv",
-              "RelativeDocumentMoniker": "Game_1\\Data\\mainFloor_collisions.csv",
-              "ToolTip": "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\Game_1\\Data\\mainFloor_collisions.csv",
-              "RelativeToolTip": "Game_1\\Data\\mainFloor_collisions.csv",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2024-08-26T02:42:03.338Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "mainFloor_Sol.csv",
-              "DocumentMoniker": "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\Game_1\\Data\\mainFloor_Sol.csv",
-              "RelativeDocumentMoniker": "Game_1\\Data\\mainFloor_Sol.csv",
-              "ToolTip": "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\Game_1\\Data\\mainFloor_Sol.csv",
-              "RelativeToolTip": "Game_1\\Data\\mainFloor_Sol.csv",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2024-08-26T02:42:00.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TX Tileset Ground.png",
-              "DocumentMoniker": "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\Game_1\\Content\\TX Tileset Ground.png",
-              "RelativeDocumentMoniker": "Game_1\\Content\\TX Tileset Ground.png",
-              "ToolTip": "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\Game_1\\Content\\TX Tileset Ground.png",
-              "RelativeToolTip": "Game_1\\Content\\TX Tileset Ground.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-08-26T02:35:09.378Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\Game_1\\Game1.cs",
               "RelativeDocumentMoniker": "Game_1\\Game1.cs",
               "ToolTip": "C:\\TravauxPerso\\TutorielYoutube\\JeuMonoGame\\Game_1\\Game_1\\Game1.cs",
               "RelativeToolTip": "Game_1\\Game1.cs",
-              "ViewState": "AQIAAHQAAAAAAAAAAAAEwH8AAAAmAAAA",
+              "ViewState": "AQIAADcAAAAAAAAAAAASwE4AAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T23:30:27.501Z",
               "EditorCaption": ""

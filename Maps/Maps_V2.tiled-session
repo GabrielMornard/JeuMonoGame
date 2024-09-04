@@ -1,0 +1,35 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "file.lastUsedOpenFilter": "Tous les Fichiers (*)",
+    "fileStates": {
+        "C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Tileset/Tiles.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Tileset/Tiles_V2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Output",
+    "last.imagePath": "C:/Users/GABRI/Downloads/FREE_Fantasy Forest/FREE_Fantasy Forest/Tiles",
+    "map.lastUsedExportFilter": "Fichiers CSV (*.csv)",
+    "openFiles": [
+    ],
+    "project": "Maps_V2.tiled-project",
+    "recentFiles": [
+        "C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Tileset/Tiles_V2.tsx",
+        "C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Tileset/Tiles.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 32,
+        "width": 32
+    }
+}

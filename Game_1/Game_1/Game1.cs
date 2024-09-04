@@ -19,16 +19,11 @@ namespace Game_1
         private Direction playerDirection;
         private bool isMoving;
 
-        private Texture2D map;
 
-        private Dictionary<Vector2, int> collisions;
-        private Dictionary<Vector2, int> mg;
-        private Dictionary<Vector2, int> fg;
-        private Texture2D textureAtlas;
-        private Texture2D Tree;
+        private Dictionary<Vector2, int> bg;
         private KeyboardState previousKeyboardState;
+        private Texture2D textureAtlas;
 
-        //private Dictionary<Vector2, int> tilemap;
         private List<Rectangle> textureStored;
 
         public Game1()
@@ -36,16 +31,15 @@ namespace Game_1
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-            //tilemap = loadMap("../../../Data/map.csv");
-            collisions = loadMap("../../../Data/mainFloor_collisions.csv");
-            mg = loadMap("../../../Data/mainFloor_Sol.csv");
-            fg = loadMap("../../../Data/mainFloor_Background.csv");
+
             textureStored = new()
             {
                 new Rectangle(0, 0, 32, 32),
                 new Rectangle(32, 0, 32, 32),
                 new Rectangle(64, 0, 32, 32)
             };
+
+            bg = loadMap("../../../Data/Sol.csv");
         }
 
         private Dictionary<Vector2, int> loadMap(string filepath) 
@@ -81,10 +75,8 @@ namespace Game_1
 
             Texture2D idleTexture = Content.Load<Texture2D>("IDLE");
             Texture2D runningTexture = Content.Load<Texture2D>("RUN");
-            map = Content.Load<Texture2D>("TX Tileset Ground");
-            Tree = Content.Load<Texture2D>("Tree");
 
-            textureAtlas = Content.Load<Texture2D>("Textures-16");
+            textureAtlas = Content.Load<Texture2D>("Tileset Outside");
 
             playerPosition = new Vector2(100, 100); // Starting position of the player
             player = new Player(idleTexture, runningTexture, playerPosition);
@@ -123,7 +115,7 @@ namespace Game_1
             int display_Tilesize = 32;
             int num_tiles_per_row = 32;
             int pixel_per_tile = 32;
-            foreach (var tile in mg)
+            foreach (var tile in bg)
             {
                 Rectangle drect = new(
                     (int)tile.Key.X * display_Tilesize,
@@ -141,7 +133,7 @@ namespace Game_1
                     pixel_per_tile
                 );
 
-                _spriteBatch.Draw(map, drect, src, Color.White);
+                _spriteBatch.Draw(textureAtlas, drect, src, Color.White);
             }
 
             player.Draw(_spriteBatch, Vector2.Zero, playerDirection); // No need to pass camera position anymore

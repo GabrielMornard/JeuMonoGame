@@ -56,3 +56,4 @@ C:\TravauxPerso\TutorielYoutube\JeuMonoGame\Game_1\Game_1\obj\Debug\net6.0\ref\G
 C:\TravauxPerso\TutorielYoutube\JeuMonoGame\Game_1\Game_1\bin\Debug\net6.0\Content\TX Tileset Ground.xnb
 C:\TravauxPerso\TutorielYoutube\JeuMonoGame\Game_1\Game_1\bin\Debug\net6.0\Content\Textures-16.xnb
 C:\TravauxPerso\TutorielYoutube\JeuMonoGame\Game_1\Game_1\bin\Debug\net6.0\Content\Tree.xnb
+C:\TravauxPerso\TutorielYoutube\JeuMonoGame\Game_1\Game_1\bin\Debug\net6.0\Content\Tileset Outside.xnb
