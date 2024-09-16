@@ -3,11 +3,15 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "C:/Users/GABRI/Downloads/Pixel Art Platformer - Village Props v2.3.0/Texture/Tiles.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "Tous les Fichiers (*)",
     "fileStates": {
+        "C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Tileset/Outside.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Tileset/Tiles.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -15,15 +19,28 @@
         "C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Tileset/Tiles_V2.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
+        },
+        "C:/Users/GABRI/Downloads/Pixel Art Platformer - Village Props v2.3.0/Texture/Tiles.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 416.99999999999994,
+                "y": 316.3333333333333
+            }
         }
     },
     "last.exportedFilePath": "C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Output",
     "last.imagePath": "C:/Users/GABRI/Downloads/FREE_Fantasy Forest/FREE_Fantasy Forest/Tiles",
     "map.lastUsedExportFilter": "Fichiers CSV (*.csv)",
+    "map.lastUsedFormat": "tmx",
     "openFiles": [
+        "C:/Users/GABRI/Downloads/Pixel Art Platformer - Village Props v2.3.0/Texture/Tiles.tmx",
+        "C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Tileset/Outside.tsx"
     ],
     "project": "Maps_V2.tiled-project",
     "recentFiles": [
+        "C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Tileset/Outside.tsx",
+        "C:/Users/GABRI/Downloads/Pixel Art Platformer - Village Props v2.3.0/Texture/Tiles.tmx",
         "C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Tileset/Tiles_V2.tsx",
         "C:/TravauxPerso/TutorielYoutube/JeuMonoGame/Tileset/Tiles.tsx"
     ],
